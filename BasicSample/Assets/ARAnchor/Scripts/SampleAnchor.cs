@@ -60,13 +60,13 @@ namespace Microsoft.MixedReality.OpenXR.Samples
 			}
 			UpdateText();
 
-			DebugText("SampleAnchor.Start");
+			PrintDebugState("SampleAnchor.Start");
 		}
 
-		private void Update() => DebugText("SampleAnchor.Update");
+		private void Update() => PrintDebugState("SampleAnchor.Update");
 
 		private int timesPrinted = 0;
-		private void DebugText(string source)
+		private void PrintDebugState(string source)
 		{
 			if (timesPrinted > 3) return;
 
