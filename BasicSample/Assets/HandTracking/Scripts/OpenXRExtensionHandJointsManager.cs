@@ -4,7 +4,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Microsoft.MixedReality.OpenXR.Samples
+namespace Microsoft.MixedReality.OpenXR.BasicSample
 {
     public class OpenXRExtensionHandJointsManager : MonoBehaviour
     {
@@ -93,7 +93,7 @@ namespace Microsoft.MixedReality.OpenXR.Samples
                 }
                 else
                 {
-                    gameObject = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                    gameObject = GameObject.CreatePrimitive(PrimitiveType.Sphere);
                     Destroy(gameObject.GetComponent<Collider>());
                     gameObject.transform.localScale = new Vector3(0.015f, 0.015f, 0.015f);
                     gameObject.transform.parent = handRoot.transform;

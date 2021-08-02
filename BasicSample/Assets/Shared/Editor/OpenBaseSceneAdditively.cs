@@ -8,7 +8,7 @@ using UnityEditor.SceneManagement;
 using UnityEditor.Experimental.SceneManagement;
 #endif
 
-namespace Microsoft.MixedReality.OpenXR.Samples
+namespace Microsoft.MixedReality.OpenXR.BasicSample
 {
     /// <summary>
     /// Ensure the base scene is additively opened whenever a feature scene is opened. 
@@ -31,7 +31,7 @@ namespace Microsoft.MixedReality.OpenXR.Samples
                 return;
             }
 
-            UnityEngine.SceneManagement.Scene baseScene = EditorSceneManager.OpenScene("Assets/Shared/Scenes/SharedMRTK.unity", OpenSceneMode.Additive);
+            UnityEngine.SceneManagement.Scene baseScene = EditorSceneManager.OpenScene("Assets/Shared/Scenes/SharedSubscene.unity", OpenSceneMode.Additive);
             EditorSceneManager.SetActiveScene(baseScene);
         }
 #endif
