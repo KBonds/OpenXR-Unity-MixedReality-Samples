@@ -9,7 +9,8 @@
         "Unity.XR.ARSubsystems",
         "Unity.XR.Management",
         "Unity.XR.OpenXR",
-        "UnityEngine.SpatialTracking"
+        "UnityEngine.SpatialTracking",
+        "Unity.TextMeshPro"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
