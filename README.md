@@ -20,7 +20,8 @@ for HoloLens 2 or Mixed Reality headsets using the Mixed Reality OpenXR plugin.
 For more details on installing related tools and setting up a Unity project,
 please reference [the plugin documentation on https://docs.microsoft.com/](https://aka.ms/openxr-unity).
 
-> NOTE: This repository uses [Git Large File Storage](https://git-lfs.github.com/) to store large files,
+> :warning: **NOTE** :
+> This repository uses [Git Large File Storage](https://git-lfs.github.com/) to store large files,
 > such as Unity packages and images. Please install the latest git-lfs before cloning this repo.
 
 ## Recommended tool versions
@@ -28,17 +29,20 @@ please reference [the plugin documentation on https://docs.microsoft.com/](https
 It's recommended to run these samples on HoloLens 2 using the following versions:
 
 - Latest Visual Studio 2019
-- Latest Unity 2020.3 LTS, recommended 2020.3.8f1 or newer
-- Latest Unity OpenXR plugin, recommended 1.2.0 or newer
-- Latest Mixed Reality OpenXR Plugin, recommended 1.0.0 or newer
-- Latest MRTK-Unity, recommended 2.7.0 or newer
-- Latest Windows Mixed Reality Runtime, recommended 106 or newer
+- Latest Unity 2020.3 LTS, recommended 2020.3.24f1 or newer (avoid 21-23, see the note below)
+- Latest Unity OpenXR plugin, recommended 1.3.1 or newer
+- Latest Mixed Reality OpenXR Plugin, recommended 1.2.1 or newer
+- Latest MRTK-Unity, recommended 2.7.2 or newer
+- Latest Windows Mixed Reality Runtime, recommended 108 or newer
+
+> :warning: **NOTE** :
+> Please avoid using Unity 2020.3.21f1, 2020.3.22f1 or 2020.3.23f1, which have a known blocking bug on HoloLens 2 where application rendering appears severe flickering. The new version 2020.3.24f1 is recommended.
 
 ### Sample for anchors and anchor persistence
 
 [AnchorsSample.cs](BasicSample/Assets/ARAnchor/Scripts/AnchorsSample.cs) in the ARAnchor scene
 demos the usage of ARFoundation to create free-world anchors,
-and the usage of the [XRAnchorStore](https://docs.microsoft.com/windows/mixed-reality/develop/unity/spatial-anchors-in-unity?tabs=openxr#using-the-anchorstore) to persist these anchors between sessions.
+and the usage of the [XRAnchorStore](https://docs.microsoft.com/windows/mixed-reality/develop/unity/spatial-anchors-in-unity?tabs=anchorstore#persistent-world-locking) to persist these anchors between sessions.
 
 ### Sample for hand tracking
 
@@ -69,6 +73,10 @@ and [ARMesh](BasicSample/Assets/ARMesh) are all implemented using ARFoundation, 
 ### Sample for Azure Spatial Anchors
 
 [SpatialAnchorsSample.cs](AzureSpatialAnchorsSample/Assets/Scripts/SpatialAnchorsSample.cs) in the [Azure Spatial Anchors sample project](AzureSpatialAnchorsSample) demos saving and locating spatial anchors. For more information on how to set up the Azure Spatial Anchors project, see the [readme](AzureSpatialAnchorsSample) in the project's folder.
+
+### Sample for Holographic Application Remoting
+
+[AppRemotingSample.cs](BasicSample/Assets/AppRemoting/Scripts/AppRemotingSample.cs) in the Main Menu scene demos app remoting. For more information on how to set up the Basic Sample project for App Remoting, see the [readme](BasicSample/Assets/AppRemoting/README.md) in the project's folder.
 
 ## How to file issues and get help
 
